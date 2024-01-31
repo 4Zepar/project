@@ -35,16 +35,16 @@ body {
 }
 @keyframes opacitychange2 {
     from {
-        filter: blur(0px);
+        filter: blur(0em);
     }
     to {
-        filter: blur(1.5px);
+        filter: blur(.12em);
     }
 }
 
 .glowtree {
     background-image: url(images/glowtree.png);
-    animation: opacitychange1 5s;
+    animation: opacitychange1 4s;
     /* z-index: -1; */
 }
 @keyframes opacitychange1 {
@@ -60,7 +60,8 @@ body {
     position: absolute;
     animation: opacitychange1 5s;
     pointer-events: none;
-    z-index: 2;
+    /* z-index: 2; */
+    inset: 0;
 }
 
 /* header и меню nav */
@@ -125,7 +126,7 @@ li::before {
     opacity: 1;
     position: absolute;
     z-index: -1;
-    backdrop-filter: blur(4.5px);
+    backdrop-filter: blur(.2em);
     animation: blur 1s ease-in-out backwards 3s;
     transition: all 0.4s ease-in-out;
 }
@@ -139,7 +140,7 @@ li::before {
     to {
         opacity: 1;
         top: -1.7em;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(0.2em);
     }
 }
 
@@ -184,13 +185,25 @@ main {
     font-weight: bold;
     font-stretch: condensed;
     text-align: right;
-    /* z-index: -1; */
+    z-index: -1;
+    /* position: relative; */
 }
 
+section {
+    /* position: absolute; */
+}
 .miracle {
     font-size: 17.2em;
-    /* font-size: 15vw; */
-    /* text-transform: uppercase; */
-    padding: 1.48em 0 0 0;
+    padding: 1.4em 0 0 0;
+    text-shadow: 0em 0em 0.05em whitesmoke, 0 0 0.08em white;
+    animation: glow 1.2s 3s infinite alternate;
+}
+@keyframes glow {
+    from {
+        text-shadow: 0em 0em 0.05em whitesmoke, 0 0 0.07em white;
+    }
+    to {
+        text-shadow: 0em 0em 0.05em whitesmoke, 0 0 0.12em white;
+    }
 }
 
