@@ -207,3 +207,30 @@ section {
     }
 }
 
+.miracle > p {
+    position: relative;
+    z-index: -1;
+}
+.miracle > p::before {
+    content:"MIRACLE";
+    font-family: 'Bahnschrift', arial;
+    width: 100%;
+    /* color: rgb(170, 53, 53); */
+    font-weight: bold;
+    font-stretch: condensed;
+    text-shadow: 0em 0em 0.05em whitesmoke, 0 0 0.08em white;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 8em;
+    animation: movement 2.5s 2.7s ease-in-out backwards;
+}
+
+@keyframes movement {
+    from {
+        right: 8em;
+    }
+    to {
+        right: 0;
+    }
+}
