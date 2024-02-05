@@ -34,7 +34,7 @@ body {
 .background {
     background-image: url(images/new\ background.png);
     animation: opacitychange2 6s forwards;
-    z-index: -4;
+    z-index: -1;
 }
 @keyframes opacitychange2 {
     from {
@@ -234,8 +234,12 @@ section {
 }
 
 .shit {
-    background-color: black;
+    margin: 20px 0 0 0;
     z-index: 3;
-    width: 100vw;
-    height: 1000px;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url(images/bottombg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
