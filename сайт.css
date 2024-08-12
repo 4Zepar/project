@@ -26,7 +26,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     inset: 0;
-    background-position: top;
+    background-position: center;
     position: absolute;
     pointer-events: none;
 }
@@ -69,7 +69,7 @@ body {
     inset: 0;
 }
 
-/* header и меню nav */
+/* ---------------------------------------------------- */
 
 header {
     display: flex;
@@ -203,6 +203,7 @@ main {
     font-stretch: condensed;
     text-align: right;
     z-index: -1;
+    /* overflow: hidden; */
     /* position: relative; */
 }
 
@@ -246,14 +247,9 @@ section {
     z-index: 3;
     min-width: 100vw;
     min-height: 100vh;
-    background-image: url(images/bottombg.jpg);
+    background-image: url(images/bottombg2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
 }
 
-@media screen and (max-width: 568px) {
-    ul {
-        font-size: 50px;
-    }
-}
